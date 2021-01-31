@@ -1,4 +1,4 @@
-const Profile = require('../models/profile')
+const Profile = require('../models/Profile')
 const profileController = {}
 
 //  profileController.alllist = (req, res) => {
