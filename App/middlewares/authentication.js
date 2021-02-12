@@ -13,7 +13,7 @@ const authenticateUser= (req,res,next)=> {
                 console.log(user)
                 next()
              })
-             .catch(err=>{
+             .catch(err=>{ 
                  res.json(err)
              })
     

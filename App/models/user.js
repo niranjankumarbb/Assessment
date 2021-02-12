@@ -22,7 +22,7 @@ const userSchema = new Schema({
          required : true,
          minlength : [3, 'Too short'],
          maxlength : [64, 'Too Long']
-     },
+     }, 
      
      loginCount  :{
         type : Number,

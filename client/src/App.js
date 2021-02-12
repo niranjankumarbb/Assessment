@@ -8,30 +8,27 @@ import Home from './components/Home'
 import Profile from './components/Profile'
 import LeaderBoard from './components/LeaderBoard'
 import Details from './components/Details'
+import Help from './components/Help'
 import Login from './components/Login'
 import Register from './components/Register'
 import {startLogout} from './actions/userAction'
-import {Navbar, Nav, DropdownButton, Dropdown} from 'react-bootstrap'
- import {MDBBtn, MDBCol , MDBFormInline, MDBIcon, button } from "mdbreact";
-import {MDBNavItem,MDBDropdown,MDBDropdownToggle,MDBDropdownMenu,MDBDropdownItem } from "mdbreact"
-// import './style.css'
-
+import {Navbar, Nav, DropdownButton, Dropdown, NavDropdown} from 'react-bootstrap'
+import {MDBBtn, MDBCol , MDBFormInline, MDBIcon, button } from "mdbreact";
+ 
 function App(props){
 
  const handleClick= ()=>{
    props.dispatch(startLogout())
  }
-
-
   
     return (
      <div >
         <BrowserRouter>
        {(Object.keys(props.user).length>0)? (
-          <div >
-         {/* <Navbar bg= 'info' variant="dark">         */}
-         <Navbar   bg= 'info' variant="dark">        
-        <Navbar.Brand href="#">Inquel</Navbar.Brand>
+          <div className='App'>
+         <Navbar bg= 'info' variant="dark">        
+         {/* <Navbar bg= 'light' variant="dark">         */}
+         <Navbar.Brand href="#">Inquel</Navbar.Brand>
                <Nav.Link href='#'> 
                   <MDBCol md="15" >
                   <MDBFormInline className="md-form">
@@ -42,21 +39,13 @@ function App(props){
                </Nav.Link>
                <Nav className="ml-auto">
                <Nav.Link href='/'>Features</Nav.Link>
-               <Nav.Link href=' '>
-               <MDBNavItem>
-               <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                     <span className="mr-2">Study guide</span>
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                     <MDBDropdownItem href="#!">Action</MDBDropdownItem>
-                     <MDBDropdownItem href="#!">Another Action</MDBDropdownItem>
-                     <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                     <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                  </MDBDropdownMenu>
-               </MDBDropdown>
-               </MDBNavItem>
-               </Nav.Link>
+               <NavDropdown title="Study guide" id="basic-nav-dropdown">
+               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+               <NavDropdown.Divider />
+               <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+               </NavDropdown>
                <Nav.Link href='/board'>Leader Board</Nav.Link>
                <Nav.Link href='/profile'>Buy a course</Nav.Link>
                <Nav.Link href='/login'>Login</Nav.Link>
@@ -64,21 +53,16 @@ function App(props){
                <Nav.Link href='/details'> 
                <MDBBtn size="sm" color="brown" ><MDBIcon icon="cart-arrow-down" className="ml-2" /></MDBBtn>
                </Nav.Link>
-               <Nav.Link href='/home'>Help?</Nav.Link>
+               <Nav.Link href='/help'>Help?</Nav.Link>
                <Nav.Link href='#' onClick={handleClick}>Logout</Nav.Link>
                </Nav>
             </Navbar>
           
-           <Route path='/' component={Home} exact={true}/>
-           <Route path='/profile' component={Profile}  />
-           <Route path='/login' component={Login}  />
-           <Route path='/board' component={LeaderBoard}  />
-           <Route path='/register' component={Register}  />
-           <Route path='/details' component={Details}  />
+          
 
          </div> 
         ):(
-           <div >
+           <div className='App'>
                <Navbar bg="info" variant="dark">
                 <Navbar.Brand href="#">Inquel</Navbar.Brand>
                 <Nav className="ml-auto">
@@ -88,13 +72,21 @@ function App(props){
                 </Nav>
             </Navbar>
          
-           <Switch> 
+           
+         </div>
+         )}  
+
+         <Switch> 
            <Route path='/' component={Home} exact={true}/>
            <Route path='/users/login' component={Login}  />
            <Route path='/users/register' component={Register}  />
+           <Route path='/profile' component={Profile}  />
+           <Route path='/login' component={Login}  />
+           <Route path='/board' component={LeaderBoard}  />
+           <Route path='/register' component={Register}  />
+           <Route path='/details' component={Details}  />
+           <Route path='/help' component={Help}  />
            </Switch>
-         </div>
-         )}  
       </BrowserRouter>
        </div>
    )

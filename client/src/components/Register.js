@@ -36,6 +36,7 @@ class Register extends React.Component{
         const redirect = ()=> {
             this.props.history.push('/users/login')
         }
+        console.log(formData)
         this.props.dispatch(startRegisterUser(formData, redirect))
     }
 
