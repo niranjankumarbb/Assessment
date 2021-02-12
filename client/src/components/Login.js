@@ -6,8 +6,7 @@ class Login extends React.Component{
        state= {
             email: '',
             password : ''
-        }
-    
+        }    
 
     handleChange= (e)=>{
         this.setState({
@@ -31,8 +30,8 @@ class Login extends React.Component{
     render(){
         console.log(this.state)
         return(
-            <div className='login'>
-              <br/><br/>
+      <div className='login'>
+      <br/><br/>
      <MDBContainer>
       <MDBRow center>
       {/* <MDBRow start center end around between> */}
@@ -122,7 +121,8 @@ class Login extends React.Component{
           </MDBCard>
         </MDBCol>
       </MDBRow>
-    </MDBContainer>            </div>                    
+    </MDBContainer>       
+    </div>                    
         )
     }
 }

@@ -8,14 +8,11 @@ class Help extends React.Component{
         this.state= {
               // temp : ''         
         }
-    }
-
-     
+    }     
 
     render(){
           return(
-           <div  >
-             
+           <div >             
              <span> Help component</span>
              </div>
          )

@@ -1,12 +1,10 @@
 import React from 'react'
-// import './style.css'
 import {startRegisterUser} from '../actions/userAction'
 import {connect} from 'react-redux'
 import { MDBCol, MDBFormInline, MDBIcon } from "mdbreact";
 import { MDBContainer, MDBRow,   MDBCard, MDBCardBody, MDBInput,   MDBBtn } from 'mdbreact';
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView  } from 'mdbreact'
 import {   MDBCardTitle,   MDBCardGroup, MDBCardImage, MDBCardText, MDBFooter  } from "mdbreact";
-
 
 class Home extends React.Component{
    state = {
@@ -43,12 +41,9 @@ class Home extends React.Component{
             <h2>unstoppable yourself</h2>
            <button>Get started</button>
            <button>Free trial</button>
-        </div>
-        {/* </div> */}
+        </div>        
           <div className='col-md-5 offset-md-1'>
-          <MDBContainer>
-      {/* <MDBRow>
-        <MDBCol md='6'> */}
+          <MDBContainer>      
           <MDBCard>
             <MDBCardBody className='mx-4'>
             <form onSubmit={this.handleSubmit}>
@@ -131,10 +126,7 @@ class Home extends React.Component{
     </MDBContainer>
     </div> 
   </div> 
- 
  <br/><br/>
-
-
   <MDBContainer>
       <MDBCarousel
         activeItem={3}

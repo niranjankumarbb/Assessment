@@ -19,8 +19,8 @@ class Profile extends React.Component{
     render(){
         console.log('AddProfile state values ',this.state)
          return(
-             <div>
-                <br/><br/> 
+           <div>
+            <br/><br/> 
             <MDBContainer>
               <MDBRow>
               <MDBCol md="12"  >
@@ -28,14 +28,12 @@ class Profile extends React.Component{
                     <div class="card-body">
                     <button type="button" class="btn btn-primary">Quiz masters</button>                  
                     <button type="button" class="btn btn-primary">Course toppers</button>
-
                     <MDBCol md="2" >
                     <MDBFormInline className="md-form">
                     <MDBIcon icon="search" />
                     <input className="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search" />
                     </MDBFormInline>
                     </MDBCol>
-
                     <button type="button" class="btn btn-indigo btn-md">Button<i class="fas fa-filter ml-2" aria-hidden="true"></i></button>
                     <div class="btn-group shadow-0">
                         <button
@@ -76,8 +74,7 @@ class Profile extends React.Component{
                                 className="rounded-circle mx-auto d-block z-depth-1 img-thumbnail"
                                 style={{height:'40px',width:'40px'}}
                                  src='https://scholarlyoa.com/wp-content/uploads/2020/05/students.jpg'
-                            />
-                            
+                            />                            
                             </th>
                             <td>Mark</td>
                             <td>Otto</td>
@@ -157,8 +154,7 @@ class Profile extends React.Component{
                             </tr>
                         </tbody>
                         </table>
-
-                        </div>
+                      </div>
                    </div> 
                 </MDBCol>    
               </MDBRow>

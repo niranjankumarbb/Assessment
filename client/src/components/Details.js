@@ -1,7 +1,6 @@
 import React from 'react'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardUp, MDBCardBody, MDBIcon  } from "mdbreact";
 
-
 function Details(props){
 
     return(
@@ -74,14 +73,11 @@ function Details(props){
                         </div>
                         </MDBCol>
                       </MDBRow>
-
                      </div>
                    </div>
               </MDBCol>
               </MDBRow>
-           </MDBContainer>
-            
-
+           </MDBContainer>    
         </div>
     )
 }
