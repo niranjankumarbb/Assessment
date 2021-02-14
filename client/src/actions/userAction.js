@@ -1,6 +1,6 @@
 import axios from 'axios'
  
-    export const startRegisterUser= (formData,redirect)=>{
+   export const startRegisterUser= (formData,redirect)=>{
     return (dispatch)=>{
         axios.post('/users/register', formData )
             .then((response)=>{
@@ -24,7 +24,7 @@ import axios from 'axios'
             dispatch(setUser({}))
             alert('logout successfully')
             window.location.href = '/'          
-     }
+       }
    }
 
    export const startLoginUser = (formData, redirect)=>{
@@ -44,7 +44,7 @@ import axios from 'axios'
             .catch((err)=>{
                 console.log(err)
             })
-       }
+        }
     }
 
    export const startGetUser = ()=>{
